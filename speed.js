@@ -2,7 +2,7 @@
 
 const speed=parseInt(prompt("enter your speed"));
 function speedDetector(speed){
-  var demerit=0
+
      if(speed < 70){
          return "Ok"
     }else{   
@@ -16,7 +16,7 @@ function speedDetector(speed){
 
  }
 
- console.log(speedDetector(80));
+ console.log(speedDetector(90));
 
 
 
