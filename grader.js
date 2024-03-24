@@ -1,3 +1,5 @@
+// marks Grading program
+
 const marks  = prompt("enter your marks")
 if(marks<0 || marks>100){
     alert("please enter valid marks")
@@ -9,6 +11,6 @@ alert("B")
     alert("C")
 }else if(marks >40 &&marks <49){
     alert("D")
-}else{
+}else if (marks<40) {
     alert("E")
 }
