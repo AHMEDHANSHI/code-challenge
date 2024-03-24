@@ -30,7 +30,7 @@ function getPayee() {
     }
 
 
-
+// nssf rates
     
     if(grossSalary <=7000){
         nssf =0.6
@@ -46,7 +46,7 @@ function getPayee() {
     
     
     
-    
+    // nhif rates 
 
 
     if(grossSalary <=59000){
