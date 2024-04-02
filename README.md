@@ -6,11 +6,11 @@ Here is the default code challengeS for the javascript WEEK-ONE challenge
 
 # (code challenge for JavaScript week one)
 the code challenge includes;
-1.program that calculates grades and scores them 
+# program that calculates grades and scores them 
 
-2.program that calculates speed and demerits   above the speedlimit
+# program that calculates speed and demerits   above the speedlimit
 
-3.program that calculates the payee git 
+# program that calculates the payee git 
 
 #### Date, 2018/09/14
 
