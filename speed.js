@@ -17,6 +17,7 @@ function speedDetector(speed){
  }
 
  console.log(speedDetector(90));
+//  output=  4 demerit points
 
 
 
