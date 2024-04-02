@@ -1,4 +1,4 @@
-// speed detector  program 
+// speed detector  program used to calculate speed values
 
 const speed=parseInt(prompt("enter your speed"));
 function speedDetector(speed){
