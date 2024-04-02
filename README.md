@@ -14,7 +14,7 @@ the code challenge includes;
 
 #### Date, 2018/09/14
 
-#### By *Hamida Mstafa Mohamed*
+#### By AHMED ISSACK Mohamed*
 
 ## Description
 It's a webpage that shows different types of triangles and what they look like.
@@ -27,7 +27,7 @@ Git
 
 ### Installation instruction
 ```
-Git clone https://github.com/hamida-mstafa/Triangle-tracker.git
+Git clone https://github.com/AHMEDHANSHI/CODECHALLENGE.git 
 
 ```
 
@@ -41,7 +41,7 @@ Github
 Javascript
 
 ## Support and contact details
-github.com/hamida-mstafa
+github.com/AHMEDHANSHI
 
 ### License
 The content of this site is licensed under the MIT license
