@@ -17,7 +17,7 @@ the code challenge includes;
 #### By AHMED ISSACK Mohamed*
 
 ## Description
-It's a webpage that shows different types of triangles and what they look like.
+They are used to help practice javascript coding and make it easier  to comprehend 
 
 ## Installation
 You use git clone to be able to download the documents in the GitHub
