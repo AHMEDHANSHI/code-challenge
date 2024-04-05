@@ -1,23 +1,26 @@
 // speed detector  program used to calculate speed values
-
-const speed=parseInt(prompt("enter your speed"));
-function speedDetector(speed){
-
-     if(speed < 70){
-         return "Ok"
-    }else{   
-         const remainder = speed-70
-        const division = Math.trunc(remainder/5)
-        demerit = parseInt(division)
+function speedDetector(speed) {
+     const speedLimit = 70;
+     
+   
+     let demeritPoints = 0;
+   
+     if (speed <= speedLimit) {
+       
+       return; "ok"
      }
-
-    return demerit
-  
-
- }
-
- console.log(speedDetector(90));
-//  output=  4 demerit points
-
+   
+     demeritPoints = Math.floor((speed - speedLimit) / 5);
+   
+     if (demeritPoints > 12) {
+       console.log("License suspended");
+     } else {
+       console.log(`Points: ${demeritPoints}`);
+     }
+   }
+   
+   speedDetector(80); // Output: Points: 2
+   speedDetector(130); // Output: License suspended
+   speedDetector(90); // Output:points:4 
 
 
