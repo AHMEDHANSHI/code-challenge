@@ -1,95 +1,76 @@
+// netpay program
+
 function getPayee() {
+    const basicSalary = parseInt(prompt("Please enter your basic salary"));
+    const benefits = parseInt(prompt("Please enter your monthly benefits"));
 
-    const basicSalary = parseInt(prompt("please enter your basic salary"))
-    const benefits = parseInt(prompt("please enter your monthly benefits"))
+    let grossSalary = basicSalary + benefits;
 
-    const grossSalary = basicSalary + benefits;
+    let rate = 0;
+    let nssfRate = 0;
+    let nhifRate = 0;
 
-    const taxable = basicSalary 
-    const paye = rate*taxable;
-    const deductions=payee + nssf +nhif
-    const netpay=grosspay-deductions
-
-    var rate = 0;
-    var nssf = 0;
-    var nhif = 0;
-    
-
-    //rate
-    if (taxable <= 24000){
+    // Calculate tax rate based on gross salary
+    if (grossSalary <= 24000) {
         rate = 0.1;
-    }else if (taxable >240001 && taxable <=32333){
+    } else if (grossSalary > 24000 && grossSalary <= 32333) {
         rate = 0.25;
-    }else if(taxable>32334 && taxable <=500000){
+    } else if (grossSalary > 32333 && grossSalary <= 500000) {
         rate = 0.3;
-    }else if(taxable>500001 && taxable <=800000){
+    } else if (grossSalary > 500000 && grossSalary <= 800000) {
         rate = 0.325;
-    }
-    else if(taxable>800001){
+    } else {
         rate = 0.35;
     }
 
-
-// nssf rates
-    
-    if(grossSalary <=7000){
-        nssf =0.6
-            
-        }else if(grossSalary<=3600) {
-            nssf=0.12
-
-        }
-
-    
-            
-        
-    
-    
-    
-    // nhif rates 
-
-
-    if(grossSalary <=59000){
-        nhif=0.25;
-
-    }else if(grossSalary >6000 && grossSalary <= 7999){
-        nhif = 0.375;
-    }else if(grossSalary <=8000 && grossSalary <=11999){
-        nhif = 0.33;
-    }else if(grossSalary >12000 && grossSalary <= 14999) {
-        nhif = 0.33
-
-    }else if(grossSalary>15000 && grossSalary <=19999) {
-        nhif=0.33
-
-    }else if(grossSalary>20000 && grossSalary<=24999){
-        nhif=0.3
-
-    }else if(grossSalary>25000 && grossSalary <=29999){
-        nhif=0.28
-
-    }else if(grossSalary>30000 && grossSalary<=34999){
-        nhif=0.26
-
-    }else if(grossSalary>35000 &&grossSalary <=  39999){
-        nhif=0.23
-
-    }else if(grossSalary>40000 &&grossSalary <=  44999){
-        nhif=0.22
-
-    }else if(grossSalary>45000 && grossSalary <= 99999){
-        nhif=0.22
-
-    }else if(grossSalary>100000){
-        nhif=0.59
-
+    // Calculate NSSF rate based on gross salary
+    if (grossSalary <= 7000) {
+        nssfRate = 0.06;
+    } else if (grossSalary <= 3600) {
+        nssfRate = 0.12;
     }
 
-    
+    // Calculate NHIF rate based on gross salary
+    if (grossSalary <= 59000) {
+        nhifRate = 0.25;
+    } else if (grossSalary <= 7999) {
+        nhifRate = 0.375;
+    } else if (grossSalary <= 11999) {
+        nhifRate = 0.33;
+    } else if (grossSalary <= 14999) {
+        nhifRate = 0.33;
+    } else if (grossSalary <= 19999) {
+        nhifRate = 0.33;
+    } else if (grossSalary <= 24999) {
+        nhifRate = 0.3;
+    } else if (grossSalary <= 29999) {
+        nhifRate = 0.28;
+    } else if (grossSalary <= 34999) {
+        nhifRate = 0.26;
+    } else if (grossSalary <= 39999) {
+        nhifRate = 0.23;
+    } else if (grossSalary <= 44999) {
+        nhifRate = 0.22;
+    } else if (grossSalary <= 99999) {
+        nhifRate = 0.22;
+    } else {
+        nhifRate = 0.59;
+    }
 
+    let payee = rate * grossSalary;
+    let nssf = grossSalary * nssfRate;
+    let nhif = grossSalary * nhifRate;
+    let netpay = grossSalary - payee - nhif - nssf;
 
-
-
-
-
+    return {
+        payee,
+        grossSalary,
+        netpay,
+        nssf,
+        nhif
+    };
 }
+
+// Call the function and store the result
+const payslip = getPayee();
+console.log(payslip);
